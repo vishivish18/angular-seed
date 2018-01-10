@@ -7,11 +7,11 @@ var sourcemaps = require('gulp-sourcemaps')
 gulp.task('js', function() {    
     return gulp.src(['app/controllers/module.js', 'app/**/*.js'])
         .pipe(sourcemaps.init())
-        .pipe(concat('app.js'))
+        .pipe(concat('app.built.js'))
         .pipe(ngAnnotate())
-        // .pipe(uglify().on('error', function(e){
-        //     console.log(e);
-        //  }))
+        .pipe(uglify().on('error', function(e){
+            console.log(e);
+         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('assets/js/'))
 })

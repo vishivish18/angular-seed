@@ -1,10 +1,11 @@
 {
-  "name": "Angular 1 SEED",
+  "name": "angular-1-seed",
   "version": "0.0.1",
   "description": "Angular 1 SEED",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "angularserver  --port 8001"
   },
   "author": "Vishal R",
   "license": "ISC",
@@ -13,8 +14,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-ng-annotate": "^2.1.0",
     "gulp-nodemon": "^2.2.1",
+    "gulp-run": "^1.7.1",
     "gulp-sourcemaps": "^2.6.3",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-shell": "^0.6.5"
   }
 }

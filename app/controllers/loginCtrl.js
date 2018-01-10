@@ -12,11 +12,11 @@ angular.module('app')
             $http.post('https://12f1b606.ngrok.io/api/auth/login', $scope.signupData)
                 .then(function(response) {
                      if(response.data.status){
-                    console.log(response)
+                    console.log(response);
                     localStorage.setItem('token', response.data.result.token)
                     $http.defaults.headers.common['x-auth'] = localStorage.getItem('token')
                    
-                  window.location.href ="/home";
+                  window.location.href ="/home"
                     }
                     else
                     {

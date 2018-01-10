@@ -1,10 +1,8 @@
 var gulp = require('gulp')
-var nodemon = require('gulp-nodemon')
-
+var shell = require('gulp-shell')
 gulp.task('dev:server', function() {
-    nodemon({
-        script: 'app.js',
-        ext: 'js',
-        ignore: ['ng*', 'gulp*', 'assets*']
-    })
+    return gulp.src('*.js', { read: false })
+        .pipe(shell([
+            'npm start'
+        ]))
 })
